@@ -15,7 +15,7 @@
 
 ### Option 2: Run with Docker
 
-In case you don't want to install maven and Java, and just wanted to try this API, you can build it with Docker image and run the container locally
+Build Docker image and run the container locally
 
 ```
 mvn clean package docker:build
