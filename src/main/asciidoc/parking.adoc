@@ -1,0 +1,35 @@
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+====== Back to API Overview: link:index.html[overview]
+
+=== Supported Parking API
+
+==== Get Parking price
+
+.request
+include::{snippets}/prices/get-price-by-zone/http-request.adoc[]
+
+Get price by zone (Authenticated access).
+
+Price information returned:
+
+    price (number)
+
+Authentication is Mandatory
+
+.response
+include::{snippets}/prices/get-price-by-zone/http-response.adoc[]
+
+Possible Errors:
+
+    401: Unauthorized.
+
+    404: Not found
+
+.curl
+include::{snippets}/prices/get-price-by-zone/curl-request.adoc[]
