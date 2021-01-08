@@ -38,7 +38,7 @@ CONTAINER ID        IMAGE                          COMMAND                  CREA
 ### Check out API and documentation
 
 ```
-curl -i 'http://localhost:9000/api/price?minutes=<INTEGER>&zone=<M1,M2>'
+curl -i 'http://localhost:9000/api/prices?minutes=<INTEGER>&zone=<M1,M2>'
 
 ```
 http://localhost:9000/docs/index.html
