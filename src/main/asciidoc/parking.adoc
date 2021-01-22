@@ -33,3 +33,28 @@ Possible Errors:
 
 .curl
 include::{snippets}/prices/get-price-by-zone/curl-request.adoc[]
+
+==== Get user
+
+.request
+include::{snippets}/user/get-user/http-request.adoc[]
+
+Get price by zone (Authenticated access).
+
+User information returned:
+
+    Welcome : (user name)
+
+Authentication is Mandatory
+
+.response
+include::{snippets}/user/get-user/http-response.adoc[]
+
+Possible Errors:
+
+    401: Unauthorized.
+
+    404: Not found
+
+.curl
+include::{snippets}/user/get-user/curl-request.adoc[]

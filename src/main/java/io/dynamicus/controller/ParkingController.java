@@ -27,9 +27,15 @@ public class ParkingController {
     public ResponseEntity<Price> getPriceByZone(@RequestParam(value = "minutes") int minutes,
                                                 @RequestParam(value = "zone") String zone) {
 
-        logger.debug("GET parking price service at ZONE: " + zone + " DURATIONS: " + minutes);
+        logger.debug("GET parking price at ZONE: " + zone + " DURATIONS: " + minutes);
 
-        Zone convertZone = Zone.valueOf(zone);
+        Zone convertZone;
+        try {
+            convertZone = Zone.valueOf(zone);
+        } catch (IllegalArgumentException e) {
+            logger.error("zone must be M1, M2 or M3, {}", e.getMessage());
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
 
         double totalPrice = calculate.calculate(minutes, convertZone);
         Price price = new Price();
