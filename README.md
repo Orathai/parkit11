@@ -2,6 +2,11 @@
 
 ## To be able to run the project, first check out the project
 
+```
+❯ git clone ..
+
+```
+
 ### Option 1: Run with Maven
 
 - Java 11 openjdk
